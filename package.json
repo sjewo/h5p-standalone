@@ -4,33 +4,35 @@
   "description": "Display H5P content as standalone frontend code, no server needed.",
   "main": "dist/main.bundle.js",
   "dependencies": {
-    "@babel/runtime": "^7.6.3",
-    "jquery": "~3.4.1",
-    "toposort-class": "^1.0.1"
+    "jquery": "~3.4.1"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "tag": "latest"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
+    "@babel/core": "^7.12.16",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/plugin-transform-runtime": "^7.12.15",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/runtime": "^7.12.13",
     "@commitlint/config-conventional": "^11.0.0",
-    "babel-loader": "^8.0.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
     "babel-plugin-add-module-exports": "^1.0.2",
     "commitlint": "^11.0.0",
-    "copy-webpack-plugin": "^5.0.4",
+    "copy-webpack-plugin": "^5.1.2",
     "cypress": "^3.6.0",
     "exports-loader": "^0.7.0",
     "husky": "^4.3.8",
     "imports-loader": "^0.8.0",
     "semantic-release": "^17.3.7",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
+    "toposort-class": "^1.0.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.9.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "webpack-plugin": "^1.0.5"
   },
   "scripts": {
     "watch": "webpack --watch --config webpack.dev.js",
@@ -62,5 +64,8 @@
   "bugs": {
     "url": "https://github.com/tunapanda/h5p-standalone/issues"
   },
-  "homepage": "https://github.com/tunapanda/h5p-standalone#readme"
+  "homepage": "https://github.com/tunapanda/h5p-standalone#readme",
+  "directories": {
+    "test": "test"
+  }
 }

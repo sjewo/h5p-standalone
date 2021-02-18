@@ -3,18 +3,18 @@ import H5P from 'imports-loader?H5PIntegration=>window.H5PIntegration!H5P';
 
 H5PIntegration = window.H5PIntegration;
 
-function urlPath(file) {
+function urlPath(file, pathToContent = '') {
   if (file.match(/^[a-z0-9]+:\/\//i)) {
     return file;
   }
   let prefix = window.location.protocol + "//" + window.location.host;
 
-  if (window.location.pathname.indexOf('/') > -1) {
-    prefix = prefix + window.location.pathname.split('/').slice(0, -1).join("/");
-  } else {
-    prefix = prefix + window.location.pathname;
-  }
-  return prefix + "/" + file;
+//  if (window.location.pathname.indexOf('/') > -1) {
+//    prefix = prefix + window.location.pathname.split('/').slice(0, -1).join("/");
+//  } else {
+//    prefix = prefix + window.location.pathname;
+//  }
+  return prefix + "/" + pathToContent + "/" + file;
 }
 
 export default class H5PStandalone {
